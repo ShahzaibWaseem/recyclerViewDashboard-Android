@@ -5,14 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 
 class HistoricalRecyclerAdapter (private var list: MutableList<Historical>, private val context: Context) :
     RecyclerView.Adapter<HistoricalRecyclerAdapter.CustomViewHolder>(){
     class CustomViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val image: ImageView = view.findViewById(R.id.historicalIcon)
+        val image: ImageView = view.findViewById(R.id.historicalValueIcon)
     }
 
     @NonNull

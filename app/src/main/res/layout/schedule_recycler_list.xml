@@ -13,7 +13,7 @@
         android:id="@+id/cardLayout"
         android:layout_width="100dp"
         android:layout_height="80dp"
-        android:cardCornerRadius="8dp"
+        android:background="@drawable/rounded_box"
         android:elevation="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

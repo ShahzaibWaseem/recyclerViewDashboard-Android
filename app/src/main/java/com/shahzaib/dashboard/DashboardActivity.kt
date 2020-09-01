@@ -27,22 +27,16 @@ class DashboardActivity: AppCompatActivity() {
         setContentView(binding.root)
 
         recentRecyclerView = binding.recentRecyclerView.apply {
-            layoutManager = LinearLayoutManager(this@DashboardActivity,
-                LinearLayoutManager.HORIZONTAL,false)
             recentRecyclerAdapter = RecentRecyclerAdapter(recentList, this@DashboardActivity)
             recentRecyclerView.adapter = recentRecyclerAdapter
         }
 
         scheduleRecyclerView = binding.scheduleRecyclerView.apply {
-            layoutManager = LinearLayoutManager(this@DashboardActivity,
-                LinearLayoutManager.HORIZONTAL,false)
             scheduleRecyclerAdapter = ScheduleRecyclerAdapter(scheduleList, this@DashboardActivity)
             scheduleRecyclerView.adapter = scheduleRecyclerAdapter
         }
 
         historicalRecyclerView = binding.historicalRecyclerView.apply {
-            layoutManager = LinearLayoutManager(this@DashboardActivity,
-                LinearLayoutManager.HORIZONTAL,false)
             historicalRecyclerAdapter = HistoricalRecyclerAdapter(historicalList, this@DashboardActivity)
             historicalRecyclerView.adapter = historicalRecyclerAdapter
         }
