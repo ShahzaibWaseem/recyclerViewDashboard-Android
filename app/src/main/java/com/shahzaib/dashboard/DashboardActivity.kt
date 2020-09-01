@@ -49,13 +49,12 @@ class DashboardActivity: AppCompatActivity() {
     }
 
     private fun fillDummyData() {
-//        val pillImage = BitmapFactory.decodeResource(resources, R.drawable.ic_compliance_pill)
-        val pillImage = drawableToBitmap(resources.getDrawable(R.mipmap.ic_launcher))
-        val heartRateImage = drawableToBitmap(resources.getDrawable(R.mipmap.ic_launcher))
-        val tempImage = drawableToBitmap(resources.getDrawable(R.mipmap.ic_launcher))
+        val pillImage = drawableToBitmap(resources.getDrawable(R.drawable.ic_pill))
+        val heartRateImage = drawableToBitmap(resources.getDrawable(R.drawable.ic_pulse))
+        val tempImage = drawableToBitmap(resources.getDrawable(R.drawable.ic_thermometer))
 
         val bpRecent: Recent = Recent(heartRateImage!!, "120/80", "B.P.")
-        val tempRecent: Recent = Recent(heartRateImage, "33", "TEMP")
+        val tempRecent: Recent = Recent(tempImage!!, "33", "TEMP")
         recentList.add(bpRecent)
         recentList.add(tempRecent)
         recentList.add(bpRecent)
@@ -64,7 +63,7 @@ class DashboardActivity: AppCompatActivity() {
         recentList.add(tempRecent)
 
         val panadolSchedule1: Schedule = Schedule(pillImage!!, "01:00 PM", "Panadol")
-        val panadolSchedule2: Schedule = Schedule(pillImage, "06:00 PM", "Panadol")
+        val panadolSchedule2: Schedule = Schedule(pillImage, "06:00 PM", "Amoxil")
         scheduleList.add(panadolSchedule1)
         scheduleList.add(panadolSchedule2)
         scheduleList.add(panadolSchedule1)
@@ -73,7 +72,7 @@ class DashboardActivity: AppCompatActivity() {
         scheduleList.add(panadolSchedule2)
 
         val bpHistorical: Historical = Historical(heartRateImage)
-        val tempHistorical: Historical = Historical(heartRateImage)
+        val tempHistorical: Historical = Historical(tempImage)
         historicalList.add(bpHistorical)
         historicalList.add(tempHistorical)
         historicalList.add(bpHistorical)
